@@ -1,0 +1,84 @@
+service: 'github-monorepo-pull-request-notifier'
+frameworkVersion: '2'
+
+custom:
+  prune:
+    automatic: true
+    number: 3
+  webpack:
+    webpackConfig: ./webpack.config.js
+    packager: "yarn"
+    includeModules: true
+  dynamodb:
+    stages:
+      - dev
+      - test
+      - local
+      - debug
+    start:
+      seed: true
+      migrate: true
+      port: 5000
+      inMemory: true
+    seed:
+      squadTable:
+        sources:
+          - table: ${env:DYNAMO_TABLE_PREFIX}.Squad
+            sources: [./migration/seed/squad.json]
+
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-webpack
+  - serverless-deployment-bucket
+  - serverless-prune-plugin
+  - serverless-dynamodb-local
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, "local"}
+  region: ${opt:region, "us-east-1"}
+  deploymentBucket:
+    name: ${opt:stage, 'local'}-github-monorepo-pull-request-notifier
+    serverSideEncryption: AES256
+  lambdaHashingVersion: '20201221'
+  tracing:
+    apiGateway: true
+    lambda: true
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:DescribeTable
+            - dynamodb:Query
+            - xray:PutTraceSegments
+            - xray:PutTelemetryRecords
+          Resource:
+            - "Fn::GetAtt": [ SquadTable, Arn ]
+            - "Fn::Join": ["/", ["Fn::GetAtt": [ SquadTable, Arn ], "index", "*"]]
+
+functions:
+  notify:
+    handler: src/api/handler.notify
+    events:
+      - http:
+          method: post
+          path: /
+
+resources:
+  Resources:
+    SquadTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${env:DYNAMO_TABLE_PREFIX}.Squad
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
+        ProvisionedThroughput:
+          ReadCapacityUnits: 1
+          WriteCapacityUnits: 1

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="256px" preserveAspectRatio="none" style="width:1251px;height:256px;" version="1.1" viewBox="0 0 1251 256" width="1251px" zoomAndPan="magnify"><defs><filter height="300%" id="f1digqotknu31f" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><!--MD5=[a7085268cff28483de6b3be045929ba4]
+entity GitHubNotification--><rect fill="#FFFFFF" filter="url(#f1digqotknu31f)" height="84.2969" style="stroke:#000000;stroke-width:1.5;" width="71" x="7" y="77.5"/><image height="48" width="48" x="18.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAAChUlEQVR4Xu2X4W0CMQyFswIrsAIrdAVWYAVWYAVWYAVWYAVWYIX06ayejudnJzlatap4PyoaEvuLYzuh1D+mwgO/rTdQS/8I6Ha7nU6nw+Gw3+8/JuHD8Xi8XC73+51nd2sY6Hq9wnFpabvdAu7xePD6lgaAgLLb7dhzSwjhEFYvEOyyq25tNhucI1sM1AZCQiD+7GRc2BKbVmoAIXOxP7a9Vkh8duCUASE230hjQkGwm2dlQHRS6+D8KjQL9rRQCERZDLsYRL2cz+fOlEIwcOJ1Kk/6ysalNBAWkAkKNbCQENYG4e82CR8wbn2SeiNZw5aW3y6lgXy/gW+eNCJ/cFEjEEA+POVlIDYXB0kAyR6ImPG8bskdliCTBBCvm4Tk4Hkj8jlQgqgzkNzNK+ExIcfZaGCWgRAJXhcn4JBkkHiSB5IJNHRdR8IBsd1S/MuJgeRbh+ask4y9z2t2hp7Gi74JCDcG2y0FvZSmsTMZoZ87sjaQzCG/bIVk7Ns5JPchG8ao/O1RVOwZCBXOi76u+lfUb5aBgMzrJuWPmKbki0U+1hioBovLC+1RZk8JriMBJBuGafQ3Daoh2l4Jukkw+iXAgYB6Af7FuO9pJswHB45Y3hWzoh8hGmhZa+bbtzWkpIxWEuClfMGbNFB9ziR7nlKckl4gK3yppERCoOXL3N4JSGpAbCcBLtpiDdr9rOitaAqB6vPtYyUGSkuRvOJkuzcheMlOag5Un03LKpVKgKJSmNUAqu4ywRYRc/xNTEugfMmsNlANCiex7oGwh/ykZnUB1elRTA23HyipKa9eIBPSecZKdjwD4biTaVJjQCb4yF9IVok82qc1QD+qN1BLb6CW/hzQJ21uBHzaxOQeAAAAAElFTkSuQmCC" y="87.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="21" y="148.4951">GitHub</text><!--MD5=[6423ea342b84226b5a2504229bb1e4dc]
+entity NotifyLambda--><rect fill="#FFFFFF" filter="url(#f1digqotknu31f)" height="116.5938" style="stroke:#FF9900;stroke-width:1.5;" width="212" x="657" y="61"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="53" x="736.5" y="85.8516">Notify</text><image height="64" width="64" x="731" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAACYUlEQVR4Xu2aQUsDMRCF+9v9B/4E/4DgzauePXjzqudQKIWCFEodGCxhX5N5mZ1kLe7yTm7czPdeMtlaN+nx7qa1wR/dllaApbUCLK0VYGn9S4Dt8/3+7YkXPiFQHoDDx8u55dq9PuBDouQHEGulsrpkjIw8pk98SJT8ALKQ8Bbq++u9awjdAaT0riF0BxBJ9U3jmzQCQEOQtYS35msEQOoZwiCAfiEMAkjdQvADnA47qWmiSrvUM0F+F2/NkQdAqsTS1eBjtV0Kc3gIHoCSzDOrRwiRAMyZFR5CJED63akjQwgGMNuleC8hiKJCCAZIRLu8vMziLYfiAZgQtAvjLYcCALSr5paPDCEAQMvNLdedOiaEuQC6YPTKLTfbpXlokJoLoPaj5Wa71BDqhwajWQB5Ebjux4QwCyCvAJvPmBD8ADj9xHI9s3qH4AfAudFybZeVEJjXp7qcAGi/CkM4W+0SN0+TnAClk6gUAo68CDdPkzwAdV8Hh+ABqJs6OIRmAMZRRwhmvyqpGcC0M12rBlvWRJgbqTYAbe2n6seRq+uh1LVyITajNgDGp9KO7BRCG4Bp0lX7VXwIx+xPNfW1mpoAGIdK9quYEPLqS17kagAg7a94bA6YKBKAsd80OFkRTRQJYNrPLPFU3SQoZiQFwMzK2K/iQzAnTSSAOSVpv4qxQ8UMswGY+ZjjOZfpiMqcNzEA5mRqf/1VZyKmJaQQALVfitvBl9gX6ern7VdpV9hXvy0PANDizKvJfpWGYF5zAbbc/3XsiOaDwuegKktXZQD8fa0AS2sFWForwNJaAZbWD9vq2LmAPvgfAAAAAElFTkSuQmCC" y="89.625"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="192" x="667" y="164.7637">[filter and forward notification]</text><!--MD5=[3c3d378930ec1113a8069657b1f52c03]
+entity SquadDb--><rect fill="#FFFFFF" filter="url(#f1digqotknu31f)" height="116.5938" style="stroke:#FF9900;stroke-width:1.5;" width="158" x="1081" y="7"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="54" x="1133" y="31.8516">Squad</text><image height="64" width="64" x="1128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAADxUlEQVR4Xu1asYrcMBC9H58yjcs026W6Kt02KV2k3SLtQkgRyJFAIMWFFIGA76GHB63Glmdks86BxeO4s2XpvdHMaGTfg7z58qrxYC+9LhwC9sYhYG8cAvbGISChe/v19O7b4/sf5w8/FfgTF3HL9t8Q7QJA8fLp+en738HRnn//Q2c8srmesADYNSeN38Gs//gL5GDvAriIW4XO6+c/dthmBATAeMoDnKDE9qkDkqjW3mqGVwDmJvVtp18PrwA4Mdg3ezAehPJFNKyqSwCmX2l7Z6yj2WfrcAmg/zQHH+w6JP0wxBw4BSLEPl5HQEDbBDKa317PAXnog4nsrToCAhgG+InkaPvMQc1vb+XAsNBpry8iIID7K2UMaQcArUWbecxPkSG7KGIC+CfmQzyoEjaaENe542rPwWF+j8g5tAhQIPhAEfzAGyQAyAA03D3MmOLaokuiAjgZ+HkSttP8DF+WJIrFpxQuAWok/IKfo9cs7Gse8wP5gHmrD65wCZCRTe7c9UV3mr8ASDO0PCtMeAVwEYbkP4uZR8bSQ88GRN2oDezFL0A9lTIwUyWHqtqi1fdyDh5iL34BQ2IvY1mW51CmHUae2pjVgQLmH6oeVbioHy4BzELF9KB4Hg9lqmduTeqVQjN7CQkAS3vLCe4P9rqsYy8hAdQQ9VGpVuPwvblbTgQEcLIhBcNiSskx5z/r2UtIAFc5j2CG7zl7g5IHsT7OICnG3IS9NAjQK5hbs+pkY3/6T7HrkX19K3QiLMDGQJdKOm5VfXbApc8wgeb+w9phE/YSFaDRfHG/Vikqopw9E7E/libhEiDZRsbDAGXYbgUK/yF73Y85zp0EMJNAg87nWQH6D3tyBLLHIFuFgVcAbcmGWW1OnARZyi179cNhtfnFL4Cu3KfDl06vOXSOB/vk7Ak+OIxuuQYuAYUrd6mey5WwsV7Q3ZpHAiqfJDq3wYXgEsBFn/TXU/os0KdX0CzsAApQhZPsZRTgiaUKAgKik9XZc32iY1rEBAzuE5n6j73V3R6s7yeAfsJZn5beapFlMUhefWgc30+A1jb9/ImsT59qtKbAxWt6ZZR3vqS3GzKu0r0FKFgIkGKup2gqz1YN+wi4Vt9qddkbc3u3wP0EcB+g06tpJ7NqCLZQbYBLgNx+YsLERY3ZgC69BbIHnSi8AtT2/eozlIy2X29+8QuQZDPNJxf3eSDHKX1m5Qiw/Xr2EhJAPK7+0K21xiYIC1Awh+bMKo06bSZdj3YBObrX+M8e/wkOAXvjELA3DgF74xCwN14AdzgE4KRN4cQAAAAASUVORK5CYII=" y="35.625"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="138" x="1091" y="110.7637">[one entry per squad]</text><!--MD5=[4664420b91861a268c39f3c30da9b7ec]
+entity NotificationApi--><rect fill="#FFFFFF" filter="url(#f1digqotknu31f)" height="116.5938" style="stroke:#FF9900;stroke-width:1.5;" width="213" x="258" y="61"/><text fill="#000000" font-family="sans-serif" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="137" x="296" y="85.8516">Notification API</text><image height="64" width="64" x="332.5" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAACh0lEQVR4Xu2YwUoDMRiE+8C+gW/gE/TsxZNXPXvw5k3wFlDpQSgICh4EYR0y9Cc22WSaTXeRpgyS/Xeyma/uJtmu3Nn6X2sVl/6XOsDS6gBLqwMsrZMHeDm/3F7dxXVF6Ijucf0g1QNg7M/7p8F/NhfXsSEvdGFfXGQKRg1AGH06AD/VGIcBhNG/X7dv61vcBlMA0B0XwaWqMVSAODrr0wF4WI1RBhiLTrUCoCowcgD56FRbAOogjBwAw41FDz1tASjDyHicApAPp3iSKgKIng4geJJSwimeNgC4WaH3mwdU8NiJ7WK4+QB+Pr4gxELl6/FZbBfDzQeQ9ySlhFM8HUDwJKWEUzwdoOTBqeRCroRTPO0B9rYu3E3REJ5SwimexgD4sjE/hl1wiCnf+TRo239DCad4WgIg3ODXhJDHEhAAh2RQwimeZgBxeucXLBTtzgkZlHCKpxkAk4Vm5EYFDKGfmchZDKd4mgFgkzP4TZF936yEUxBOcQuEU0o4xdMMwO0SGwM3SOYM0zstnOJpCeCCb51jMyvFh8QqSjjF0xjA+VHd3+l/75S1i+EUT3sAt3t8Of2PSQmneI4C4PzYcXHPUAyneI4FUJQSTvF0AMGTlBJO8XQA7+HEz/ULf5V2uM8b03wA/PAXBy63SrsYbj4AxMISy20PKkqbK10+3HwAeU9SSjjF0wEET1JKOMVzAgCDf0bD95LY0xwAw/Epz3ioHIDz+WzKS5K0BQhzD34/m0/vigAU1h3MgEbCH5ltQpwOwNx8q2ZuDGevpnlJAKaYhO1qAHSvy206DMC08W/xRlINYLkrrkBVApgwcPE2HRM6Vuc2TQVYXB1gaXWApdUBllYHWFq/egLi3urzDTIAAAAASUVORK5CYII=" y="89.625"/><text fill="#000000" font-family="sans-serif" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="193" x="268" y="164.7637">[receives notification requests]</text><!--MD5=[4530e131b8cc0fde552d611207ebaf09]
+entity SquadWebhook--><rect fill="#FFFFFF" filter="url(#f1digqotknu31f)" height="84.2969" style="stroke:#000000;stroke-width:1.5;" width="138" x="1091" y="160.5"/><image height="48" width="48" x="1136" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAABm0lEQVR4Xu2XXbWEIBRGrWAFK1hhKljBClawghWsYAUrWMEK3u/OuBA/5U9BZtZiP/jgEthwDgfMli8j4xexSUImkpAJZ6F5nvu+77qubVs8h2HAG/7oBg5CGL4sy+wMvIclN7iEldA0TUVRsMUBaN1fLbMQgsIjq8nzfBxH7sIFg5CTjeCOk04I648Z82gWIL7clzU6oaqqeChrmqZBD1iquq5fb7ArbTJMKYRE5kEcOZ0PtiqPtEcphClyZ57QOymFVCXHC5rYKYW4D69oFimO0CflT/kFIezVoAkENAcfCyG63No3KLY0qMxOCOLcOgyolqrjZRO6XwldQeWUTFY2IVR3bhEeJKsk888q9PzyCLAQJ0I4+fjDB5E33SoUJV4COXCrUOjCY0Scbt8ihKvpTihuyDIpjVahcLcfS3iFUDf5k2fhHFqippH8U7AJXfvj8YJ8X9sdrlHKI50efP14OLsRLLpfs9DyvoRc+z90BbXmeNs/EfqA8IVLc6iIfU4ohQSYxOiP45IQZqGHSUImkpCJJGQiCZn4AxrA3ubTAGLAAAAAAElFTkSuQmCC" y="170.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="1105" y="231.4951">Squad Webhook</text><!--MD5=[7bdee0cd1cb47b35b3786111133a6935]
+link GitHubNotification to NotificationApi--><path d="M78.1899,119.5 C120.0769,119.5 191.5788,119.5 252.6466,119.5 " fill="none" id="GitHubNotification-to-NotificationApi" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="257.7713,119.5,248.7713,115.5,252.7713,119.5,248.7713,123.5,257.7713,119.5" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="114" x="109" y="102.6387">Send Pull Request</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="71" x="132.5" y="116.6074">Notification</text><!--MD5=[f0dd3cc0e2c9590eeff193465fd2c8cd]
+link NotificationApi to NotifyLambda--><path d="M471.0289,119.5 C526.8676,119.5 595.21,119.5 651.7326,119.5 " fill="none" id="NotificationApi-to-NotifyLambda" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="656.8173,119.5,647.8173,115.5,651.8173,119.5,647.8173,123.5,656.8173,119.5" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="124" x="502" y="116.6387">Forward HTTP event</text><!--MD5=[3e45a1152ce2226b4037a2308bd78401]
+link NotifyLambda to SquadDb--><path d="M869.1279,105.0645 C933.9164,96.2519 1015.6015,85.1411 1075.9019,76.939 " fill="none" id="NotifyLambda-to-SquadDb" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1080.9359,76.2543,1071.4788,73.504,1075.9815,76.9283,1072.5573,81.431,1080.9359,76.2543" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="31" x="959.5" y="78.6387">Scan</text><!--MD5=[29dfe3f3e9afdb3f82df06e59dd0a1cf]
+link SquadDb to NotifyLambda--><path d="M1080.8305,113.2146 C1071.0547,117.4135 1060.9832,121.0093 1051,123.5 C993.8933,137.7478 928.4174,138.0483 874.3404,134.215 " fill="none" id="SquadDb-to-NotifyLambda" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="869.1434,133.8315,877.8245,138.4833,874.1298,134.1996,878.4135,130.505,869.1434,133.8315" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="105" x="922.5" y="120.6387">List of all squads</text><!--MD5=[1dff467482e563ad2cf48c664e6eb43c]
+link NotifyLambda to SquadWebhook--><path d="M869.1062,176.6314 C879.0236,180.4798 889.0785,183.8661 899,186.5 C960.5282,202.834 1032.9618,206.0745 1085.8926,205.6647 " fill="none" id="NotifyLambda-to-SquadWebhook" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="1090.9531,205.614,1081.9133,201.7047,1085.9534,205.6643,1081.9938,209.7043,1090.9531,205.614" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="145" x="900.5" y="155.6387">Forward notification via</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="150" x="900" y="169.6074">HTTP if is related to one</text><text fill="#666666" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="39" x="955.5" y="183.5762">squad</text><!--MD5=[a4dbe87925dd6cf7a9902203c0ee7d38]
+@startuml Big Picture
+
+' AWS style
+!define AWSPuml https://raw.githubusercontent.com/awslabs/aws-icons-for-plantuml/main/dist
+!includeurl AWSPuml/AWSCommon.puml
+
+' Icon-Font Sprites
+!define ICONURL https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/v2.3.0
+!includeurl ICONURL/common.puml
+
+' Components
+!includeurl AWSPuml/ApplicationIntegration/APIGateway.puml
+!includeurl AWSPuml/Compute/Lambda.puml
+!includeurl AWSPuml/Database/DynamoDB.puml
+!includeurl ICONURL/font-awesome/github.puml
+!includeurl ICONURL/font-awesome/cloud.puml
+
+left to right direction
+FA_GITHUB(GitHubNotification, "GitHub") #White
+Lambda(NotifyLambda, "Notify", "filter and forward notification")
+DynamoDB(SquadDb, "Squad", "one entry per squad")
+APIGateway(NotificationApi, "Notification API", "receives notification requests")
+FA_CLOUD(SquadWebhook, "Squad Webhook") #White
+
+
+GitHubNotification - -> NotificationApi : Send Pull Request Notification
+NotificationApi - -> NotifyLambda : Forward HTTP event
+NotifyLambda - -> SquadDb : Scan
+SquadDb - -> NotifyLambda : List of all squads
+NotifyLambda - -> SquadWebhook : Forward notification via HTTP if is related to one squad
+
+@enduml
+
+@startuml Big Picture
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam rectangle {
+    StereotypeFontSize 12
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+
+
+
+
+
+
+
+
+
+
+
+hide stereotype
+
+sprite $APIGateway [64x64/16z] {
+xTC5biCm30JGiIfRqjp_lcMkqWqjUzuBvvlDjTFJ4uqlQJ5QA-1yYWCQOtNkan9IBTOotqoI4X9DvfvCIaZqi4zAIFImVrT2E-lt_bn2oxnpdAV_V2zIgG_7
+D5-ASlDm_CZ-_tplDji7IIgSCSjRSP95wCLcUCF16ngzm2Rx4-S6mMC1Ktqv3G4s9r2c-We9ii98Xg1EzJmMKCgPSx9dXJagIKFb34-ddjuvPta6PDdwTP_d
+-_ut3yRzOTCye9I7OvhNQcptXtxa-_n1ROmtHURP1ESYXlmPGnhJH1MWg0rvqm98ZOG-5Y6PbmHdyIf8_04xnyMpyNMkdPwU7G
+}
+
+skinparam rectangle<<APIGateway>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+skinparam participant<<APIGateway>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+sprite $Lambda [64x64/16z] {
+xPO73iCm30CfEPRy_mzt3zQ0q38kTWwZomIlYyZu9mS7sJzHyni-2JdVuqs7o_aSH4CivGEkvnb7BkK3JSxN0dgU1VIyBh31_4QC1nsRa0-_Gz-R8OTCWox0
+nAg0omBbzvPckmII_fHh0Z0jwhaauBVglbSW02HzR-gEEExLzBsbi2FNixv3W8-6Bi0d7zKf2V31H_M6JLXI5dq8mBGTUVnKIA0hGqQDiW3Nwm9SNmaOyeTw
+FYuC6Iy5wwOoPDpWI7b93NFzBE0Nkb0_2LpZQ3_LEzzbA5_KSochpFcwFk7pajPvFiRrXK2Lzwc-4a0hwwkzPW7Ar_LMVB9rFc3nfDth2QFBIieJ3SIZdWM8
+zlN2ESPC9tByXOE3Cm
+}
+
+skinparam rectangle<<Lambda>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+skinparam participant<<Lambda>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+sprite $DynamoDB [64x64/16z] {
+xTP5aYmv48HX3uxm-nzuka3MnQcXjwflhTyI1VplVNrDL_we7lvjwOeRuZdSLWf0FRBFCbm16FUC0bvyq1xSqa3mNn0CdqpSA7umBw-kkCKF6iOdXPYbuPzx
+-8lBaqkWF_S2oQVBauieF_UP0cZqwyiNygWdomG0HCtpuV8A7lS_fi9KHUm-6VXXFx1wz_G1zH_1TmO-3c1Utx7ZOlYE8ido5vTVHb1yQm1h_XBaoMpc32WW
+qMiqBeoBVim9vOG04FCOSlf78cwVxuE-Z9nq5Q1lVjgjd0tXCv7Dd0r8lPtKXk1HRu3cy5QWDtCsaY60M5RFa4DIPIjVFTcXM7Bzz0RdLbyycSgC7yr4atGu
+j_f-NByLrtnoU0JACe0FSzPXfE6u3-YGjzTF50F6sNe10y2RDmpdl04C3od205ZM6WmxvQGbTEFoJauOJaIaMD3L1Pe7UZrZLxYh5WrGhhwE-ySnltbXftzO
+VshbuzZgm- -sZt6k7zfofy-RzISo8zmKWFYmzleVasw2Ap7F8RdRM_5gVd3PwWVH09ol97hh_98AlZ0Y_-Ryb43_Y_CR8FrlpezQ__pygfxp9y_F-xw-_W8
+}
+
+skinparam rectangle<<DynamoDB>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+skinparam participant<<DynamoDB>> {
+    BackgroundColor #FFFFFF
+    BorderColor #FF9900
+}
+sprite $github [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000379ABBA8520000000000000000000
+00000000000000004AFFFFFFFFFFFD810000000000000000
+000000000000004CFFFFFFFFFFFFFFFF9100000000000000
+00000000000009FFFFFFFFFFFFFFFFFFFE50000000000000
+000000000002DFFFFFFFFFFFFFFFFFFFFFF9000000000000
+00000000003EFFFFFFFFFFFFFFFFFFFFFFFFB00000000000
+0000000002EFFFFFFFFFFFFFFFFFFFFFFFFFFA0000000000
+000000000DFFFFEFFFFFFFFFFFFFFFFFEFFFFF7000000000
+000000009FFFFE016DFFFFFFFFFFFFA304FFFFF300000000
+00000003FFFFFA00006B8543346AB20000FFFFFD00000000
+0000000CFFFFF800000000000000000000EFFFFF50000000
+0000003FFFFFF800000000000000000000FFFFFFD0000000
+0000009FFFFFFC00000000000000000003FFFFFFF3000000
+000000FFFFFFF600000000000000000000CFFFFFF8000000
+000003FFFFFFC0000000000000000000002FFFFFFC000000
+000006FFFFFF50000000000000000000000CFFFFFF000000
+000009FFFFFF100000000000000000000008FFFFFF200000
+00000AFFFFFF000000000000000000000006FFFFFF300000
+00000BFFFFFF000000000000000000000007FFFFFF400000
+00000AFFFFFF100000000000000000000008FFFFFF400000
+000009FFFFFF40000000000000000000000BFFFFFF200000
+000008FFFFFF80000000000000000000000EFFFFFF100000
+000005FFFFFFE0000000000000000000005FFFFFFE000000
+000001FFFFFFF700000000000000000000DFFFFFFA000000
+000000DFFFFFFF5000000000000000000BFFFFFFF6000000
+0000006FFFFFFFF91000000000000004DFFFFFFFF0000000
+0000000FFF61AFFFFA630000000147CFFFFFFFFF90000000
+00000008FFF637FFFFFE10000006FFFFFFFFFFFF20000000
+00000000DFFF34AFFFF800000000EFFFFFFFFFF700000000
+000000004FFFC058DDA200000000AFFFFFFFFFD000000000
+0000000007FFF5041450000000009FFFFFFFFE2000000000
+00000000009FFF600000000000009FFFFFFFF30000000000
+000000000008FFFFEDE3000000009FFFFFFE300000000000
+0000000000006FFFFFF3000000009FFFFFD2000000000000
+00000000000002BFFFF3000000009FFFF700000000000000
+0000000000000004BFF2000000009FF82000000000000000
+000000000000000002400000000014000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<FA GITHUB>> White
+sprite $cloud [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000015676410000000000000000000000000
+000000000000006CFFFFFFFC500000000000000000000000
+0000000000002DFFFFFFFFFFFC1000000000000000000000
+000000000004FFFFFFFFFFFFFFE300000000000000000000
+00000000004FFFFFFFFFFFFFFFFF30000000000000000000
+0000000001EFFFFFFFFFFFFFFFFFD0000000000000000000
+000000000AFFFFFFFFFFFFFFFFFFF8039BB7100000000000
+000000002FFFFFFFFFFFFFFFFFFFFFAFFFFFF60000000000
+000000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000000000
+00000000CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF100000000
+00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000000
+00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000000
+00000000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000000
+0000003CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF500000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE000000000
+00005FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF930000000
+0002FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000000
+000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC00000
+002FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000
+007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000
+00BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC000
+00CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF100
+00CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF400
+00BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF500
+008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF400
+003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF100
+000CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000
+0004FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+00007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFC0000
+000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD10000
+0000005EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB100000
+000000007CFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB40000000
+000000000001333333333333333333333333310000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+skinparam folderBackgroundColor<<FA CLOUD>> White
+
+left to right direction
+rectangle "<color:black><$github></color>\r GitHub" as GitHubNotification <<FA GITHUB>> #White
+rectangle "==Notify\n<color:#D86613><$Lambda></color>\n//<size:12>[filter and forward notification]</size>//" <<Lambda>> as NotifyLambda
+rectangle "==Squad\n<color:#3B48CC><$DynamoDB></color>\n//<size:12>[one entry per squad]</size>//" <<DynamoDB>> as SquadDb
+rectangle "==Notification API\n<color:#CC2264><$APIGateway></color>\n//<size:12>[receives notification requests]</size>//" <<APIGateway>> as NotificationApi
+rectangle "<color:black><$cloud></color>\r Squad Webhook" as SquadWebhook <<FA CLOUD>> #White
+
+
+GitHubNotification - -> NotificationApi : Send Pull Request Notification
+NotificationApi - -> NotifyLambda : Forward HTTP event
+NotifyLambda - -> SquadDb : Scan
+SquadDb - -> NotifyLambda : List of all squads
+NotifyLambda - -> SquadWebhook : Forward notification via HTTP if is related to one squad
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 07:25:05 BRT 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

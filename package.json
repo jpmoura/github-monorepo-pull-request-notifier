@@ -1,0 +1,67 @@
+{
+  "name": "github-pullrequest-notifier",
+  "version": "1.0.0",
+  "description": "Serverless application to filter squads PRs based on a prefix for each squad",
+  "main": "serverless.yml",
+  "scripts": {
+    "debug": "node --inspect node_modules/.bin/serverless offline start -s debug --env debug --httpPort 3000 --lambdaPort 4000",
+    "start": "npx sls offline start --env local --httpPort 3000 --lambdaPort 4000",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --coverage --maxWorkers=2"
+  },
+  "engines": {
+    "node": ">=12.22.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+    }
+  },
+  "dependencies": {
+    "aws-sdk": "^2.918.0",
+    "aws-xray-sdk-core": "^3.3.3",
+    "axios": "^0.21.1",
+    "fluentvalidation-ts": "^2.2.1",
+    "tslog": "^3.2.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.71",
+    "@types/faker": "^5.5.5",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^14.14.25",
+    "@typescript-eslint/eslint-plugin": "^4.4.1",
+    "cd": "^0.3.3",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^7.27.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "faker": "^5.5.3",
+    "github-pullrequest-notifier": "/home/joaopedro/source/repos/github-pullrequest-notifier",
+    "husky": "^6.0.0",
+    "jest": "^27.0.3",
+    "jest-sonar": "^0.2.12",
+    "serverless": "^2.43.1",
+    "serverless-deployment-bucket": "^1.5.1",
+    "serverless-dotenv-plugin": "^3.9.0",
+    "serverless-dynamodb-local": "^0.2.39",
+    "serverless-offline": "^7.0.0",
+    "serverless-prune-plugin": "^1.5.0",
+    "serverless-webpack": "^5.3.5",
+    "ts-jest": "^27.0.1",
+    "ts-loader": "^8.0.15",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.3.2",
+    "webpack": "^5.20.2",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "author": "João Pedro Santos de Moura <moura.joaopedro@gmail.com>",
+  "license": "MIT"
+}
