@@ -1,7 +1,7 @@
 [
   {
     "id": "diplomas",
-    "webhook": "https://discord.com/api/webhooks/848549291642322995/5BLf6e26AQ8y1ukvfuM57tm3VmZJbYKxp8y4xmNM2zFPyWIKxqCzFHdxYq9La0rC0Lri/github",
+    "webhook": "https://your.test.webhook/here",
     "filterToken": "diploma"
   }
 ]
