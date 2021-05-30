@@ -3,25 +3,21 @@ import axios from 'axios';
 import * as faker from 'faker';
 import { Logger } from 'tslog';
 import { mocked } from 'ts-jest/utils';
-import { MockedObjectDeep } from 'ts-jest/dist/utils/testing';
-import SquadRepository from '../../../infra/repository/squad.repository';
 import NotifyUseCase from '../../../use-case/notify.usecase';
 import NotifyRequest from '../../../domain/use-case/request/notify.request';
 import NotificationAction from '../../../domain/enum/notification-action.enum';
 import { createNotificationInputDto, createSquad } from '../../util/util';
 
 jest.mock('axios');
+
+const listSquadRepositoryMock = jest.fn();
+jest.mock('../../../infra/repository/squad.repository', () => jest.fn().mockImplementation(() => ({
+  list: listSquadRepositoryMock,
+})));
+
 const logger = mocked(Logger, true);
 jest.spyOn(logger.prototype, 'error').mockImplementation();
 jest.spyOn(logger.prototype, 'warn').mockImplementation();
-
-function setupSquadRepositoryMock(listMock: jest.Mock<any, any>): MockedObjectDeep<typeof SquadRepository> {
-  const squadRepositoryMock = mocked(SquadRepository, true);
-
-  squadRepositoryMock.prototype.list = listMock;
-
-  return squadRepositoryMock;
-}
 
 function buildHeaders(): Record<string, string> {
   const headers: Record<string, string> = {};
@@ -37,7 +33,7 @@ const sut = new NotifyUseCase();
 
 describe('notify', () => {
   beforeEach(() => {
-    mockedAxios.post.mockClear();
+    jest.resetAllMocks();
   });
 
   describe('request is invalid', () => {
@@ -50,8 +46,6 @@ describe('notify', () => {
     ])('pull_request is %p then should return unsuccessful response with validation errors', async (pullRequest: any) => {
       expect.hasAssertions();
 
-      const listMock = jest.fn();
-      setupSquadRepositoryMock(listMock);
       const notification = createNotificationInputDto();
       notification.pull_request = pullRequest;
       const request = {
@@ -62,7 +56,7 @@ describe('notify', () => {
       const response = await sut.execute(request);
 
       expect(response.success).toBeFalsy();
-      expect(listMock).not.toHaveBeenCalled();
+      expect(listSquadRepositoryMock).not.toHaveBeenCalled();
       expect(mockedAxios.post).not.toHaveBeenCalled();
     });
   });
@@ -80,8 +74,6 @@ describe('notify', () => {
     ])('notification action is %p then should return successful response without forwarding notification', async (action: any) => {
       expect.hasAssertions();
 
-      const listMock = jest.fn();
-      setupSquadRepositoryMock(listMock);
       const request = {
         notification: createNotificationInputDto(action),
         headers: buildHeaders(),
@@ -90,16 +82,14 @@ describe('notify', () => {
       const response = await sut.execute(request);
 
       expect(response.success).toBeTruthy();
-      expect(listMock).not.toHaveBeenCalled();
+      expect(listSquadRepositoryMock).not.toHaveBeenCalled();
       expect(mockedAxios.post).not.toHaveBeenCalled();
     });
 
     it('notification action is "opened" and list returns empty array then should not forward notification and return successful response', async () => {
       expect.hasAssertions();
 
-      const listMock = jest.fn();
-      listMock.mockResolvedValue([]);
-      setupSquadRepositoryMock(listMock);
+      listSquadRepositoryMock.mockResolvedValue([]);
       const request = {
         notification: createNotificationInputDto(NotificationAction.Opened, faker.git.branch()),
         headers: buildHeaders(),
@@ -108,16 +98,14 @@ describe('notify', () => {
       const response = await sut.execute(request);
 
       expect(response.success).toBeTruthy();
-      expect(listMock).toHaveBeenCalledTimes(1);
+      expect(listSquadRepositoryMock).toHaveBeenCalledTimes(1);
       expect(mockedAxios.post).not.toHaveBeenCalled();
     });
 
     it('notification action is "opened" and list returns squads which filterToken does not match with branch prefix then should not forward notification and return successful response', async () => {
       expect.hasAssertions();
 
-      const listMock = jest.fn();
-      listMock.mockResolvedValue([createSquad(), createSquad()]);
-      setupSquadRepositoryMock(listMock);
+      listSquadRepositoryMock.mockResolvedValue([createSquad(), createSquad()]);
       const request = {
         notification: createNotificationInputDto(NotificationAction.Opened, faker.git.branch()),
         headers: buildHeaders(),
@@ -126,7 +114,7 @@ describe('notify', () => {
       const response = await sut.execute(request);
 
       expect(response.success).toBeTruthy();
-      expect(listMock).toHaveBeenCalledTimes(1);
+      expect(listSquadRepositoryMock).toHaveBeenCalledTimes(1);
       expect(mockedAxios.post).not.toHaveBeenCalled();
     });
 
@@ -134,10 +122,8 @@ describe('notify', () => {
       expect.hasAssertions();
 
       const filterToken = faker.random.word();
-      const listMock = jest.fn();
-      listMock.mockResolvedValue([createSquad(), createSquad(filterToken)]);
+      listSquadRepositoryMock.mockResolvedValue([createSquad(), createSquad(filterToken)]);
       mockedAxios.post.mockRejectedValueOnce(new Error('Network error'));
-      setupSquadRepositoryMock(listMock);
       const request = {
         notification: createNotificationInputDto(NotificationAction.Opened, `${filterToken}/${faker.git.branch()}`),
         headers: buildHeaders(),
@@ -146,7 +132,7 @@ describe('notify', () => {
       const response = await sut.execute(request);
 
       expect(response.success).toBeFalsy();
-      expect(listMock).toHaveBeenCalledTimes(1);
+      expect(listSquadRepositoryMock).toHaveBeenCalledTimes(1);
       expect(mockedAxios.post).toHaveBeenCalledTimes(1);
     });
 
@@ -154,9 +140,7 @@ describe('notify', () => {
       expect.hasAssertions();
 
       const filterToken = faker.random.word();
-      const listMock = jest.fn();
-      listMock.mockResolvedValue([createSquad(), createSquad(filterToken)]);
-      setupSquadRepositoryMock(listMock);
+      listSquadRepositoryMock.mockResolvedValue([createSquad(), createSquad(filterToken)]);
       const request = {
         notification: createNotificationInputDto(NotificationAction.Opened, `${filterToken}/${faker.git.branch()}`),
         headers: buildHeaders(),
@@ -165,7 +149,7 @@ describe('notify', () => {
       const response = await sut.execute(request);
 
       expect(response.success).toBeTruthy();
-      expect(listMock).toHaveBeenCalledTimes(1);
+      expect(listSquadRepositoryMock).toHaveBeenCalledTimes(1);
       expect(mockedAxios.post).toHaveBeenCalledTimes(1);
     });
   });
