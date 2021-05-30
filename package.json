@@ -1,5 +1,5 @@
 {
-  "name": "github-pullrequest-notifier",
+  "name": "github-monorepo-pull-request-notifier",
   "version": "1.0.0",
   "description": "Serverless application to filter squads PRs based on a prefix for each squad",
   "main": "serverless.yml",
@@ -44,7 +44,6 @@
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-jest": "^24.3.6",
     "faker": "^5.5.3",
-    "github-pullrequest-notifier": "/home/joaopedro/source/repos/github-pullrequest-notifier",
     "husky": "^6.0.0",
     "jest": "^27.0.3",
     "jest-sonar": "^0.2.12",
