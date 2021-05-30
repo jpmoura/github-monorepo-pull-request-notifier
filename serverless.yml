@@ -52,7 +52,7 @@ provider:
         - Effect: Allow
           Action:
             - dynamodb:DescribeTable
-            - dynamodb:Query
+            - dynamodb:Scan
             - xray:PutTraceSegments
             - xray:PutTelemetryRecords
           Resource:
