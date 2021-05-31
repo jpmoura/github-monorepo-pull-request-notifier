@@ -5,7 +5,7 @@ import NotificationAction from '../../domain/enum/notification-action.enum';
 import PullRequestState from '../../domain/enum/pull-request-state.enum';
 import Squad from '../../domain/model/squad.model';
 
-function toArray<T>(collection: T): Array<any> {
+export function toArray<T>(collection: T): Array<any> {
   return Object.values(collection);
 }
 

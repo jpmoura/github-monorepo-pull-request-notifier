@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "lib": ["es2017"],
+    "module": "CommonJS",
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
@@ -9,6 +10,9 @@
     "target": "es2017",
     "outDir": "lib",
     "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "types": ["reflect-metadata"],
   },
   "include": ["src/**/*.ts"],
   "exclude": [

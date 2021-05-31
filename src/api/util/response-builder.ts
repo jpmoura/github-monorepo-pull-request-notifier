@@ -4,8 +4,6 @@ export default function buildResponse(body: any, statusCode: number, additionalH
   const headers = {
     ...additionalHeaders,
     'Content-Type': 'application/json',
-    'Access-Control-Allow-Origin': '*',
-    'Access-Control-Allow-Credentials': true,
   };
 
   return {

@@ -1,12 +1,14 @@
 import { Validator } from 'fluentvalidation-ts';
-import NotifyRequest from '../../use-case/request/notify.request';
-import NotificationInputDtoValidator from '../dto/notification-input-dto.validator';
+import { inject, injectable } from 'inversify';
+import NotifyRequest from '../../interface/request/notify-request.interface';
 import { isObject } from '../shared/util';
+import NotificationInputDto from '../../dto/github/notification-input.dto';
+import IValidator from '../../interface/validator/validator.interface';
+import Types from '../../../cross-cutting/ioc/types';
 
-export default class NotifyRequestValidator extends Validator<NotifyRequest> {
-  private readonly notificationInputDtoValidator = new NotificationInputDtoValidator();
-
-  constructor() {
+@injectable()
+export default class NotifyRequestValidator extends Validator<NotifyRequest> implements IValidator<NotifyRequest> {
+  constructor(@inject(Types.NotificationInputDtoValidator) private readonly notificationInputDtoValidator: IValidator<NotificationInputDto>) {
     super();
 
     this.ruleFor('notification')

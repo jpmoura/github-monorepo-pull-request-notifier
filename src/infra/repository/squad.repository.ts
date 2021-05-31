@@ -1,8 +1,11 @@
 import { DynamoDB } from 'aws-sdk';
+import { injectable } from 'inversify';
+import IRepository from '../../domain/interface/infra/repository/repository.interface';
 import Squad from '../../domain/model/squad.model';
 import DynamoDBDocumentClient from '../provider/aws.provider';
 
-export default class SquadRepository {
+@injectable()
+export default class SquadRepository implements IRepository<Squad> {
   private TABLE_NAME = `${process.env.DYNAMO_TABLE_PREFIX}.Squad`;
 
   private dynamoDbClient = DynamoDBDocumentClient();

@@ -1,23 +1,25 @@
-import axios from 'axios';
 import { ValidationErrors } from 'fluentvalidation-ts/dist/ValidationErrors';
-import { Logger } from 'tslog';
+import { inject, injectable } from 'inversify';
 import NotificationInputDto from '../domain/dto/github/notification-input.dto';
 import NotificationAction from '../domain/enum/notification-action.enum';
+import IUseCaseAsync from '../domain/interface/use-case/use-case-async.interface';
 import Squad from '../domain/model/squad.model';
-import NotifyRequest from '../domain/use-case/request/notify.request';
-import NotifyResponse from '../domain/use-case/response/notify.response';
-import NotifyRequestValidator from '../domain/validator/request/notify-request.validator';
-import SquadRepository from '../infra/repository/squad.repository';
+import NotifyRequest from '../domain/interface/request/notify-request.interface';
+import NotifyResponse from '../domain/interface/response/notify-response.interface';
+import Types from '../cross-cutting/ioc/types';
+import IRepository from '../domain/interface/infra/repository/repository.interface';
+import IValidator from '../domain/interface/validator/validator.interface';
+import IHttpClient from '../domain/interface/infra/client/http-client.interface';
+import ILogger from '../domain/interface/infra/logger.interface';
 
-export default class NotifyUseCase {
-  private readonly squadRepository = new SquadRepository();
-
-  private readonly validator = new NotifyRequestValidator();
-
-  private readonly logger = new Logger({
-    name: 'NotifyUseCase',
-    type: 'json',
-  });
+@injectable()
+export default class NotifyUseCase implements IUseCaseAsync<NotifyRequest, NotifyResponse> {
+  constructor(
+    @inject(Types.SquadRepository) private readonly squadRepository: IRepository<Squad>,
+    @inject(Types.NotifyRequestValidator) private readonly validator: IValidator<NotifyRequest>,
+    @inject(Types.HttpClient) private readonly httpClient: IHttpClient,
+    @inject(Types.Logger) private readonly logger: ILogger,
+  ) { }
 
   private static getPullRequestBranchPrefix(notification: NotificationInputDto): string {
     const [branchPrefix] = notification.pull_request.head.ref.split('/');
@@ -40,12 +42,9 @@ export default class NotifyUseCase {
     return gitHubHeaders;
   }
 
-  private static async sendNotification(notification: NotificationInputDto, webhook: string, headers: Record<string, string>): Promise<void> {
+  private async sendNotification(notification: NotificationInputDto, webhook: string, headers: Record<string, string>): Promise<void> {
     const gitHubHeaders = NotifyUseCase.getOnlyGitHubHeaders(headers);
-
-    await axios.post(webhook, notification, {
-      headers: gitHubHeaders,
-    });
+    await this.httpClient.post(webhook, notification, gitHubHeaders);
   }
 
   private static buildResponse(wasSuccessful: boolean = true, validationErrors: ValidationErrors<NotifyRequest> | undefined = undefined): NotifyResponse {
@@ -87,7 +86,7 @@ export default class NotifyUseCase {
     }
 
     try {
-      await NotifyUseCase.sendNotification(request.notification, squadToNotify.webhook, request.headers);
+      await this.sendNotification(request.notification, squadToNotify.webhook, request.headers);
     } catch (error) {
       this.logger.error('Error while forwarding notification to squad webhook', request, squadToNotify, error);
       return NotifyUseCase.buildResponse(false);

@@ -1,10 +1,16 @@
+import 'reflect-metadata';
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from 'aws-lambda';
+import { inject, injectable } from 'inversify';
 import NotificationInputDto from '../../domain/dto/github/notification-input.dto';
-import NotifyUseCase from '../../use-case/notify.usecase';
+import IUseCaseAsync from '../../domain/interface/use-case/use-case-async.interface';
+import NotifyRequest from '../../domain/interface/request/notify-request.interface';
+import NotifyResponse from '../../domain/interface/response/notify-response.interface';
 import responseBuilder from '../util/response-builder';
+import Types from '../../cross-cutting/ioc/types';
 
+@injectable()
 export default class NotificationController {
-  private readonly notifyUseCase = new NotifyUseCase();
+  constructor(@inject(Types.NotifyUseCaseAsync) private readonly notifyUseCase: IUseCaseAsync<NotifyRequest, NotifyResponse>) { }
 
   async notify(event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> {
     const notification = JSON.parse(event.body) as NotificationInputDto;
