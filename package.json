@@ -1,6 +1,6 @@
 {
   "name": "github-monorepo-pull-request-notifier",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Serverless application to filter squads PRs based on a prefix for each squad",
   "main": "serverless.yml",
   "scripts": {
