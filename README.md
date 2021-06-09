@@ -1,6 +1,7 @@
 # ✉ GitHub Monorepo Pull Request Notifier
 [![CD Workflow](https://github.com/jpmoura/github-monorepo-pull-request-notifier/actions/workflows/cd.yml/badge.svg)](https://github.com/jpmoura/github-monorepo-pull-request-notifier/actions/workflows/cd.yml)
 [![CI Workflow](https://github.com/jpmoura/github-monorepo-pull-request-notifier/actions/workflows/ci.yml/badge.svg)](https://github.com/jpmoura/github-monorepo-pull-request-notifier/actions/workflows/ci.yml)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=jpmoura_github-monorepo-pull-request-notifier&metric=alert_status)](https://sonarcloud.io/dashboard?id=jpmoura_github-monorepo-pull-request-notifier)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=jpmoura_github-monorepo-pull-request-notifier&metric=bugs)](https://sonarcloud.io/dashboard?id=jpmoura_github-monorepo-pull-request-notifier)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=jpmoura_github-monorepo-pull-request-notifier&metric=code_smells)](https://sonarcloud.io/dashboard?id=jpmoura_github-monorepo-pull-request-notifier)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=jpmoura_github-monorepo-pull-request-notifier&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=jpmoura_github-monorepo-pull-request-notifier)
@@ -20,16 +21,25 @@ This project uses clean code approach with repository pattern. The structure is 
 |-\migrations
 |----\seeds
 |-\src
+|----\api
+|--------\controller
+|--------\installer
+|--------\util
+|----\cross-cutting
+|--------\ioc
 |----\domain
 |--------\dto
 |--------\enum
+|--------\installer
 |--------\model
-|--------\use-case
 |--------\validator
 |----\infra
+|--------\client
+|--------\installer
 |--------\provider
 |--------\repository
 |----\use-case
+|--------\installer
 ```
 
 There are only one function:
@@ -45,6 +55,7 @@ Contains a `seed` subdirectory which has all seed files for all DynamoDB tables 
 Contains all source files separated by responsibilities like `domain`, `infra` and `use-case`
 
 1. `api`: contains all handlers for API Gateway integration
+2. `cross-cutting`: contains all multi-domain items
 2. `domain`: contains all interfaces used across the application
 3. `infra`: contains all data repositories at this point
 4. `use-case`: contains all business logic
