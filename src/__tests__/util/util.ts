@@ -9,12 +9,15 @@ export function toArray<T>(collection: T): Array<any> {
   return Object.values(collection);
 }
 
-export function createNotificationInputDto(action?: NotificationAction, ref?: string): NotificationInputDto {
+export function createNotificationInputDto(action?: NotificationAction, headRef?: string, baseRef?: string): NotificationInputDto {
   return {
     action: action ?? faker.random.arrayElement(toArray(NotificationAction)),
     pull_request: {
       head: {
-        ref: ref ?? faker.git.branch(),
+        ref: headRef ?? faker.git.branch(),
+      },
+      base: {
+        ref: baseRef ?? faker.git.branch(),
       },
       state: faker.random.arrayElement(toArray(PullRequestState)),
     },

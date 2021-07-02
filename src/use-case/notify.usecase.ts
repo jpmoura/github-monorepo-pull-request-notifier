@@ -22,7 +22,14 @@ export default class NotifyUseCase implements IUseCaseAsync<NotifyRequest, Notif
   ) { }
 
   private static getPullRequestBranchPrefix(notification: NotificationInputDto): string {
-    const [branchPrefix] = notification.pull_request.head.ref.split('/');
+    let prop: string = 'head';
+
+    if (notification.pull_request.head.ref === 'master' || notification.pull_request.head.ref === 'main') {
+      prop = 'base';
+    }
+
+    const [branchPrefix] = notification.pull_request[prop].ref.split('/');
+
     return branchPrefix;
   }
 
